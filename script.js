@@ -18,7 +18,7 @@ const showWinner = (userWin, UserChoice, compChoice) => {
         msg.style.backgroundColor = 'green';
         console.log(`You win! Your score: ${userScore}, Computer score: ${compScore}`);
     } else {
-        compScore++;    
+        compScore++;
         compScoreDisplay.innerHTML = compScore;
         msg.innerHTML = `You lose! ${compChoice} beats ${UserChoice}`;
         msg.style.backgroundColor = 'red';
@@ -32,7 +32,7 @@ const playGame = (UserChoice) => {
     if (UserChoice === compChoice) {
         console.log('It\'s a tie!');
         msg.innerHTML = 'It\'s a tie!';
-        msg.style.backgroundColor = '#edede9b3';
+        msg.style.backgroundColor = '#300c30';
 
     } else {
         let userWin = true;

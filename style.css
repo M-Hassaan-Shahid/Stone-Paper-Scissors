@@ -2,69 +2,121 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: SimHei;
+  box-sizing: border-box;
 }
+
 body {
-  background-color: #4f4c47e2;
+  background-color: #790a9d;
+  padding: 1rem;
 }
+
 h1 {
-  color: #edede9b3;
-  background-color: #f5ebe0;
+  color: #ffc2d1;
+  background-color: #300c30;
   height: 5rem;
   line-height: 5rem;
+  font-size: 2rem;
 }
-.choice {
-  height: 165px;
-  width: 165px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-img {
-  height: 150px;
 
-  width: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-.choice:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  transition: transform 0.6s ease;
-  border-radius: 50%;
-  background-color: #f5ebe0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
 .choices {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
-.score-board {
+
+.choice {
+  height: 30vw;
+  width: 30vw;
+  max-width: 165px;
+  max-height: 165px;
   display: flex;
-  color: #edede9b3;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
-  font-size: 2rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
+
+img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.choice:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.6s ease;
+  border-radius: 50%;
+  background-color: #300c30;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.score-board {
+  display: flex;
+  color: #ffc2d1;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.score {
+  /* flex: 1; */
+  min-width: 120px;
+}
+
 #user-score,
 #comp-score {
-  font-size: 4rem;
+  font-size: 3rem;
 }
+
 .msg-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
 }
+
 #msg {
-  font-size: 2rem;
-  color: #edede9b3;
-  background-color: #f5ebe0;
-  display: inline;
+  font-size: 1.5rem;
+  color: #ffc2d1;
+  background-color: #300c30;
+  display: inline-block;
   padding: 1rem;
   border-radius: 30px;
+  max-width: 90%;
+}
+
+/* ✅ Mobile Optimization */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .choice {
+    width: 28vw;
+    height: 28vw;
+  }
+
+  .score-board {
+    gap: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  #user-score,
+  #comp-score {
+    font-size: 2.5rem;
+  }
+
+  #msg {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
 }
